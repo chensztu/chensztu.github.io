@@ -12,8 +12,7 @@ body {
     color: #333;  /* 文字颜色 */
     line-height: 1.6;
     display: flex;
-    flex-direction: column;  /* 内容垂直布局 */
-    align-items: center;  /* 居中内容 */
+    justify-content: center;  /* 内容水平居中 */
     padding: 20px 0;
 }
 
@@ -56,10 +55,10 @@ nav ul li a:hover, nav ul li a.active {
 /* 主体内容容器，采用Flexbox布局 */
 .main-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    margin-top: 80px;  /* 为了避免顶部导航栏遮挡，给内容留出空间 */
+    margin: 0 auto;
     background-color: white;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -67,10 +66,9 @@ nav ul li a:hover, nav ul li a.active {
 
 /* 左列样式 */
 .left-column {
-    flex: 3;
+    flex: 3;  /* 占3/4的空间 */
     padding: 20px;
     text-align: left;
-    background-color: #ffffff;
 }
 
 .left-column h1 {
@@ -85,9 +83,10 @@ nav ul li a:hover, nav ul li a.active {
 
 /* 右列样式 */
 .right-column {
-    flex: 1;
+    flex: 1;  /* 占1/4的空间 */
     padding: 20px;
     background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .right-column h2 {
@@ -103,11 +102,12 @@ nav ul li a:hover, nav ul li a.active {
 /* 页脚样式 */
 footer {
     background-color: white;
-    text-align: center;
+    text-align: center;  /* 使footer内容居中 */
     padding: 10px 0;
     margin-top: 40px;
     color: #666;
     font-size: 1em;
+    width: 100%;  /* 确保footer占满全宽 */
 }
 
 /* 响应式设计：当屏幕宽度小于768px时，左右列堆叠成一列 */
