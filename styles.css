@@ -74,21 +74,23 @@ main {
 
 /* 左侧和右侧列 */
 .left-column, .right-column {
-    width: 45%;  /* 设置左右列的宽度为 45% */
+    flex: 1;  /* 让列均匀分配空间 */
     padding: 20px;
     text-align: left;
 }
 
-/* 左侧列标题 */
-.left-column h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+/* 也可以为特定的列设置宽度，例如： */
+.left-column {
+    flex-basis: 45%; /* 或者固定宽度 */
 }
 
-/* 右侧列标题 */
-.right-column h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+.right-column {
+    flex-basis: 45%; /* 或者固定宽度 */
+}
+
+/* 另外，也可以考虑让某一列自适应扩展 */
+.right-column {
+    flex-grow: 2; /* 让右侧列扩大以填充剩余空间 */
 }
 
 /* 内容段落样式 */
