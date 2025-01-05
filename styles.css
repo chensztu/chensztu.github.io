@@ -25,6 +25,9 @@ header {
     width: 100%;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 增加轻微的阴影 */
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 nav ul {
@@ -110,6 +113,7 @@ footer {
     font-size: 0.9em;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
+    margin-top: auto;
 }
 
 /* 响应式设计：当屏幕宽度小于768px时 */
