@@ -7,12 +7,10 @@
 
 /* 页面背景和字体设置 */
 body {
-    font-family: 'Georgia', serif;  /* 使用 Google Fonts 中的 Georgia 字体 */
+    font-family: 'Georgia', serif;  /* 使用 Georgia 字体 */
     background-color: #f8f8f8;  /* 浅灰色背景 */
     color: #333;  /* 字体颜色 */
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;  /* 使页面内容纵向排列 */
     min-height: 100vh;  /* 保证页面至少有屏幕的高度 */
@@ -25,9 +23,10 @@ header {
     width: 100%;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 增加轻微的阴影 */
-    position: relative;  /* 去掉固定定位，使header随页面滚动 */
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;  /* 确保导航栏在最上层 */
 }
 
 nav ul {
@@ -60,53 +59,4 @@ nav ul li a.active {
 
 /* 主体内容区域 */
 main {
-    max-width: 1200px;
-    width: 100%;
-    padding: 30px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 80px;  /* 给header留出空间 */
-    display: flex;
-    justify-content: center;  /* 使整个main区域居中 */
-    flex-grow: 1;  /* 允许main区域占满剩余空间 */
-}
-
-/* 左侧和右侧列 */
-.left-column, .right-column {
-    width: 45%;  /* 设置左右列的宽度为 45% */
-    padding: 20px;
-    text-align: left;
-}
-
-/* 左侧列标题 */
-.left-column h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-/* 右侧列标题 */
-.right-column h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-/* 内容段落样式 */
-p {
-    font-size: 1.1em;
-    line-height: 1.5;
-    margin-bottom: 15px;
-}
-
-/* 联系信息区域样式 */
-.contact {
-    text-align: center;
-    font-size: 1em;
-    color: #666;
-    margin-top: 30px;
-}
-
-/* 页脚样式 */
-footer {
-    background-color: white;
-    padding: 10px 0;
-    text-alig
+    flex-grow: 1;  /*
