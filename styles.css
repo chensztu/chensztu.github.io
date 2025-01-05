@@ -1,51 +1,98 @@
-/* styles.css */
+/* 清除默认的样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* 页面的基础设置 */
 body {
-    min-height: 100vh;
-    max-width: 900px;
-    background: rgb(255, 255, 255); 
+    font-family: 'Arial', sans-serif;  /* 字体 */
+    background-color: #f4f4f9;  /* 背景颜色 */
+    color: #333;  /* 字体颜色 */
+}
+
+/* 顶部的 logo 和导航栏容器 */
+header {
+    background-color: #003366;  /* 深蓝色背景 */
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
     margin: 0 auto;
 }
 
-ul {
-    list-style-type: none;
+/* logo 样式 */
+.logo h1 {
+    font-size: 2.5em;
+    font-weight: bold;
     margin: 0;
-    padding: 0px;
-    overflow: hidden;
-    background-color: #0099FF;
 }
 
-li {
-    float: left;
+.logo p {
+    font-size: 1.1em;
+    margin: 0;
 }
 
-li a {
-    display: block;
+/* 导航栏的样式 */
+.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin: 0 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+    color: #ffcc00;  /* 悬停时更改颜色 */
+}
+
+/* 响应式设计，适应小屏幕 */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .navigation li {
+        margin: 10px 0;
+    }
+
+    .logo h1 {
+        font-size: 2em;
+    }
+
+    .logo p {
+        font-size: 1em;
+    }
+}
+
+/* 页脚样式 */
+footer {
+    background-color: #003366;
     color: white;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    background-color: #111;
-}
-
-.contact {
-    background: rgb(255, 255, 255);
-    color: black;
-    margin: 0px;
-    padding: 0px;
-}
-
-.divleft {
-    float: left;
-    width: 500px;
-    border: 1px;
-}
-
-.divright {
-    float: right;
-    width: 350px;
-    border: 1px;
+    padding: 20px;
+    font-size: 1em;
 }
