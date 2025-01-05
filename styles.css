@@ -14,7 +14,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;  /* 页面内容水平居中 */
+    flex-direction: column;  /* 使页面内容纵向排列 */
+    min-height: 100vh;  /* 最小高度为100vh，确保页面内容满屏 */
     padding-top: 40px;
 }
 
@@ -25,9 +26,6 @@ header {
     width: 100%;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 增加轻微的阴影 */
-    position: fixed;
-    top: 0;
-    left: 0;
 }
 
 nav ul {
@@ -68,6 +66,7 @@ main {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;  /* 允许主内容区域撑满剩余空间 */
 }
 
 /* 左侧和右侧列 */
