@@ -21,7 +21,6 @@ body {
 
 /* 顶部导航栏样式 */
 header {
-    background-color: white;
     padding: 20px 0;
     width: 100%;
     max-width: 1200px;  /* 限制最大宽度 */
@@ -29,6 +28,7 @@ header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 增加轻微的阴影 */
 }
 
+/* 导航栏链接 */
 nav ul {
     list-style: none;
     text-align: center;
@@ -69,6 +69,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 /* 左侧和右侧列 */
