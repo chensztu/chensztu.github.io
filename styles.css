@@ -21,11 +21,15 @@ body {
 
 /* 顶部导航栏样式 */
 header {
+    background-color: white;
+    position: fixed;  /* 固定在页面顶部 */
+    top: 0;  /* 让header位于页面顶部 */
     padding: 10px 0;
     width: 100%;
     max-width: 1200px;  /* 限制最大宽度 */
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 增加轻微的阴影 */
+    z-index: 10;  /* 确保header在其他元素之上 */
 }
 
 /* 导航栏链接 */
@@ -118,7 +122,7 @@ footer {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 1200px;  /* 限制最大宽度 */
-    margin-top: 40px;  /* 给footer留出间距 */
+    margin-top: 10px;  /* 给footer留出间距 */
 }
 
 /* 响应式设计：当屏幕宽度小于768px时 */
