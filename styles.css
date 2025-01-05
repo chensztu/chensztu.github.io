@@ -22,7 +22,7 @@ body {
 /* 顶部导航栏样式 */
 header {
     background-color: white;
-    position: sticky;  /* 变为sticky，避免固定定位遮挡内容 */
+    position: fixed;  /* 固定在页面顶部 */
     top: 0;
     padding: 10px 0;
     width: 100%;
@@ -76,8 +76,8 @@ main {
     padding: 30px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 80px;  /* 给固定导航栏留出空间 */
-    margin-bottom: 10px;  /* 给footer留出空间 */
+    margin-top: 60px;  /* 紧接着导航栏，没有多余间隙 */
+    margin-bottom: 0;  /* 给footer留出空间 */
     display: flex;
     justify-content: space-between;  /* 左右列分布 */
     align-items: flex-start;  /* 内容对齐 */
@@ -117,6 +117,7 @@ p {
         flex-direction: column;  /* 使左右列堆叠成一列 */
         justify-content: center;  /* 使main区域内容居中 */
         align-items: center;  /* 居中main内容 */
+        margin-top: 0;  /* 在小屏幕下，去除上方的额外间距 */
     }
 
     .left-column, .right-column {
@@ -145,7 +146,7 @@ footer {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 1200px;  /* 限制最大宽度 */
-    margin-top: 10px;  /* 给footer留出间距 */
+    margin-top: 0;  /* 给footer与main之间没有空隙 */
 }
 
 /* 响应式设计：当屏幕宽度大于768px时 */
@@ -156,6 +157,6 @@ footer {
     }
 
     main {
-        margin-top: 80px;  /* 给主内容区域留出与导航栏的间距 */
+        margin-top: 60px;  /* 给主内容区域留出与导航栏的间距 */
     }
 }
