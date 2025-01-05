@@ -32,6 +32,7 @@ header {
     z-index: 10;
     height: 60px;
 }
+
 /* 导航栏无序列表 */
 nav ul {
     list-style: none;
@@ -107,18 +108,35 @@ p {
 
 /* 响应式设计：当屏幕宽度小于768px时 */
 @media (max-width: 768px) {
+    /* 调整主体内容区域，使其在小屏幕上居中 */
     main {
         flex-direction: column;  /* 使左右列堆叠成一列 */
         justify-content: center;  /* 使main区域内容居中 */
         align-items: center;  /* 居中main内容 */
     }
 
+    /* 左右列在小屏幕上占满全宽 */
     .left-column, .right-column {
         width: 100%;  /* 在小屏幕上，左右列都占满屏幕 */
         margin-bottom: 20px;
     }
-}
 
+    /* 导航栏在小屏幕上从左对齐 */
+    nav ul {
+        text-align: left;
+    }
+
+    /* 导航栏链接改为块级显示 */
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* 调整body的padding-top，确保导航栏不遮挡内容 */
+    body {
+        padding-top: 80px;  /* 在小屏幕上给导航栏预留足够的空间 */
+    }
+}
 
 /* 页脚样式 */
 footer {
@@ -131,34 +149,4 @@ footer {
     width: 100%;
     max-width: 1200px;  /* 限制最大宽度 */
     margin-top: 10px;  /* 给footer留出间距 */
-}
-
-/* 响应式设计：当屏幕宽度小于768px时 */
-@media (max-width: 768px) {
-    /* 在小屏幕下，增加顶部内边距，确保内容不被导航栏遮挡 */
-    body {
-        padding-top: 80px;  /* 确保在手机上有足够的空间 */
-    }
-}
-
-@media (max-width: 768px) {
-    main {
-        flex-direction: column;  /* 使左右列堆叠成一列 */
-        justify-content: center;  /* 使main区域内容居中 */
-        align-items: center;  /* 居中main内容 */
-    }
-
-    .left-column, .right-column {
-        width: 100%;  /* 在小屏幕上，左右列都占满屏幕 */
-        margin-bottom: 20px;
-    }
-
-    nav ul {
-        text-align: left;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
 }
