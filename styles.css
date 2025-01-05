@@ -22,7 +22,6 @@ body {
 /* 顶部导航栏样式 */
 header {
     background-color: white;
-    position: fixed;  /* 固定在页面顶部 */
     top: 0;  /* 让header位于页面顶部 */
     padding: 10px 0;
     width: 100%;
