@@ -16,7 +16,7 @@ body {
     justify-content: flex-start;  /* 保证页面内容从顶部开始 */
     align-items: center;  /* 水平居中所有内容 */
     min-height: 100vh;  /* 保证页面至少有屏幕的高度 */
-    padding-top: 40px;  /* 给导航栏留出空间 */
+    padding-top: 60px;  /* 给导航栏留出空间，调整这个值与header的高度一致 */
 }
 
 /* 顶部导航栏样式 */
