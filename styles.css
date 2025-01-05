@@ -7,13 +7,13 @@
 
 /* 页面背景和字体设置 */
 body {
-    font-family: 'Georgia', serif;  /* 使用 Georgia 字体 */
+    font-family: 'Georgia', serif;  /* 使用 Google Fonts 中的 Georgia 字体 */
     background-color: #f8f8f8;  /* 浅灰色背景 */
     color: #333;  /* 字体颜色 */
     line-height: 1.6;
     display: flex;
     flex-direction: column;  /* 使页面内容纵向排列 */
-    justify-content: center;  /* 垂直居中所有内容 */
+    justify-content: flex-start;  /* 保证页面内容从顶部开始 */
     align-items: center;  /* 水平居中所有内容 */
     min-height: 100vh;  /* 保证页面至少有屏幕的高度 */
     padding-top: 40px;  /* 给导航栏留出空间 */
@@ -59,7 +59,6 @@ nav ul li a.active {
 
 /* 主体内容区域 */
 main {
-    flex-grow: 1;  /* main区域占据剩余空间 */
     max-width: 1200px;
     width: 100%;
     padding: 30px;
@@ -68,8 +67,8 @@ main {
     margin-top: 80px;  /* 给固定导航栏留出空间 */
     margin-bottom: 80px;  /* 给footer留出空间 */
     display: flex;
-    justify-content: center;  /* 使整个main区域居中 */
-    align-items: flex-start;  /* 使main内容顶部对齐 */
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 /* 左侧和右侧列 */
