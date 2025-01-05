@@ -1,96 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wei Chen @ SZTU</title>
-    <link rel="icon" href="image/epl.ico" type="image/x-icon">
+/* 清除默认样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- CSS 样式 -->
-    <style>
-        /* 清除默认的样式 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* 页面的基础样式 */
+body {
+    font-family: 'Arial', sans-serif;  /* 字体 */
+    background-color: #f4f4f9;  /* 背景颜色 */
+    color: #333;  /* 字体颜色 */
+}
 
-        /* 导航栏样式 */
-        ul {
-            list-style-type: none;
-            background-color: #003366; /* 深蓝色背景 */
-            padding: 0;
-            margin: 0;
-            text-align: center;
-        }
+/* 导航栏样式 */
+ul {
+    list-style: none;
+    background-color: #003366;  /* 深蓝色背景 */
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2em;
+}
 
-        ul li {
-            display: inline-block; /* 水平排列 */
-            margin: 0 20px;  /* 水平间距 */
-        }
+ul li {
+    display: inline-block;  /* 水平排列 */
+    margin: 0 20px;  /* 水平间距 */
+}
 
-        ul li a {
-            text-decoration: none; /* 去掉下划线 */
-            color: white;  /* 链接文字为白色 */
-            font-size: 1.1em;  /* 字体大小 */
-            padding: 10px 20px; /* 内边距，增加点击区域 */
-            display: block;
-            transition: background-color 0.3s ease; /* 添加平滑的背景色过渡 */
-        }
+ul li a {
+    text-decoration: none;  /* 去掉下划线 */
+    color: white;  /* 字体颜色 */
+    padding: 14px 20px;  /* 内边距 */
+    display: block;
+    transition: background-color 0.3s ease;  /* 平滑过渡 */
+}
 
-        ul li a:hover {
-            background-color: #ffcc00;  /* 悬停时的背景色 */
-            color: black; /* 悬停时字体颜色 */
-        }
+ul li a:hover {
+    background-color: #ffcc00;  /* 悬停时的背景色 */
+    color: black;  /* 悬停时的字体颜色 */
+}
 
-        /* 高亮当前页面的链接 */
-        ul li a.active {
-            background-color: #ffcc00; /* 当前页面的高亮背景色 */
-            color: black; /* 高亮时的字体颜色 */
-        }
+/* 高亮显示当前页面的菜单项 */
+ul li a.active {
+    background-color: #ffcc00;  /* 当前页面的背景色 */
+    color: black;  /* 当前页面的字体颜色 */
+}
 
-        /* 响应式设计：适应小屏幕 */
-        @media (max-width: 768px) {
-            ul {
-                text-align: left;
-            }
+/* 内容区样式 */
+.content {
+    margin: 20px auto;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-            ul li {
-                display: block;
-                margin: 10px 0; /* 垂直排列时调整间距 */
-            }
-        }
-    </style>
+.content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
 
-    <!-- JavaScript 动态高亮当前页面 -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // 获取所有的导航链接
-            const navLinks = document.querySelectorAll("ul li a");
+/* 响应式设计：适应小屏幕 */
+@media (max-width: 768px) {
+    ul {
+        text-align: left;  /* 导航栏在小屏幕上左对齐 */
+    }
 
-            // 获取当前页面的文件名
-            const currentPage = window.location.pathname.split("/").pop();
+    ul li {
+        display: block;
+        margin: 10px 0;  /* 垂直排列时调整间距 */
+    }
 
-            // 遍历所有链接，添加 active 类
-            navLinks.forEach(link => {
-                if (link.href.includes(currentPage)) {
-                    link.classList.add("active");
-                } else {
-                    link.classList.remove("active");
-                }
-            });
-        });
-    </script>
-</head>
-<body>
-
-    <ul>
-        <li><a class="active" href="index.html" target="_self">HOME</a></li>
-        <li><a href="research.html" target="_self">RESEARCH</a></li>
-        <li><a href="team.html" target="_self">TEAM</a></li>
-        <li><a href="publication.html" target="_self">PUBLICATION</a></li>
-        <li><a href="cv.html" target="_self">CV</a></li>
-    </ul>
-
-</body>
-</html>
+    .content h1 {
+        font-size: 2em;
+    }
+}
