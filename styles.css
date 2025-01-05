@@ -16,13 +16,13 @@ body {
     justify-content: flex-start;  /* 保证页面内容从顶部开始 */
     align-items: center;  /* 水平居中所有内容 */
     min-height: 100vh;  /* 保证页面至少有屏幕的高度 */
-    padding-top: 60px;  /* 给导航栏留出空间，确保导航栏不遮挡内容 */
+    padding-top: 60px;  /* 给导航栏留出空间，确保导航栏不会遮挡内容 */
 }
 
 /* 顶部导航栏样式 */
 header {
     background-color: white;
-    position: relative;  /* 修改为相对定位，让导航栏跟随页面滚动 */
+    position: sticky;  /* 变为sticky，避免固定定位遮挡内容 */
     top: 0;
     padding: 10px 0;
     width: 100%;
@@ -30,7 +30,7 @@ header {
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 10;
-    height: 60px;  /* 固定高度，确保与内容区域有间隙 */
+    height: 60px;
 }
 
 /* 导航栏无序列表 */
@@ -76,7 +76,7 @@ main {
     padding: 30px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 0;  /* 保证紧接着导航栏，不再有多余间距 */
+    margin-top: 80px;  /* 给固定导航栏留出空间 */
     margin-bottom: 10px;  /* 给footer留出空间 */
     display: flex;
     justify-content: space-between;  /* 左右列分布 */
@@ -84,4 +84,78 @@ main {
     flex-wrap: wrap;  /* 当屏幕宽度不足时，自动换行 */
 }
 
-/* 左侧和
+/* 左侧和右侧列 */
+.left-column, .right-column {
+    flex: 1 1 45%;  /* 设置每列的基础宽度为 45%，且允许伸缩 */
+    padding: 20px;
+    text-align: left;
+    box-sizing: border-box;  /* 让padding不影响总宽度 */
+}
+
+/* 图片样式 */
+.image img {
+    width: 100%;  /* 使图片宽度填充父元素 */
+    max-width: 100%;  /* 图片最大宽度不超过容器宽度 */
+    height: auto;  /* 保持图片的比例 */
+}
+
+/* 内容段落样式 */
+p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* 响应式设计：当屏幕宽度小于768px时 */
+@media (max-width: 768px) {
+    /* 在小屏幕下，给导航栏增加足够的空间避免遮挡 */
+    body {
+        padding-top: 80px;  /* 适当增加顶部空间 */
+    }
+
+    main {
+        flex-direction: column;  /* 使左右列堆叠成一列 */
+        justify-content: center;  /* 使main区域内容居中 */
+        align-items: center;  /* 居中main内容 */
+    }
+
+    .left-column, .right-column {
+        width: 100%;  /* 在小屏幕上，左右列都占满屏幕 */
+        margin-bottom: 20px;
+    }
+
+    /* 导航栏在小屏幕上从左对齐 */
+    nav ul {
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* 页脚样式 */
+footer {
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;  /* 限制最大宽度 */
+    margin-top: 10px;  /* 给footer留出间距 */
+}
+
+/* 响应式设计：当屏幕宽度大于768px时 */
+@media (min-width: 768px) {
+    /* 确保在大屏幕上，导航栏与主内容之间的间距合理 */
+    body {
+        padding-top: 60px;  /* 给导航栏和主内容之间保留足够的间距 */
+    }
+
+    main {
+        margin-top: 80px;  /* 给主内容区域留出与导航栏的间距 */
+    }
+}
