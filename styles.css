@@ -14,8 +14,8 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;  /* 页面内容水平居中 */
-    padding-top: 40px;
+    flex-direction: column;  /* 使页面内容纵向排列 */
+    min-height: 100vh;  /* 保证页面至少有屏幕的高度 */
 }
 
 /* 顶部导航栏样式 */
@@ -28,6 +28,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;  /* 确保导航栏在最上层 */
 }
 
 nav ul {
@@ -65,9 +66,10 @@ main {
     padding: 30px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+    margin-top: 80px;  /* 给固定导航栏留出空间 */
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;  /* 确保main区域填充剩余空间 */
 }
 
 /* 左侧和右侧列 */
@@ -109,31 +111,4 @@ footer {
     background-color: white;
     padding: 10px 0;
     text-align: center;
-    color: #666;
-    font-size: 0.9em;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-    margin-top: auto;
-}
-
-/* 响应式设计：当屏幕宽度小于768px时 */
-@media (max-width: 768px) {
-    main {
-        flex-direction: column;  /* 使左右列堆叠成一列 */
-    }
-
-    .left-column, .right-column {
-        flex: none;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    nav ul {
-        text-align: left;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}
+   
