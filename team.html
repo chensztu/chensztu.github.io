@@ -46,150 +46,169 @@
             </ul>
         </nav>
     </header>
-	
-<style>
 
-div.img {
-    margin: 5px;
-    border: 1px solid #ccc;
-    float: left;
-    width: 250 px;
-}
+<main class="main-container">
+  <style>
+    /* 图片容器的样式 */
+    .responsive {
+      display: inline-block;
+      margin: 5px;
+      text-align: center;
+      width: 230px; /* 每个图片容器的宽度 */
+    }
 
-div.img:hover {
-    border: 1px solid #777;
-}
+    .img {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px; /* 增加圆角效果 */
+      overflow: hidden; /* 防止图片溢出 */
+    }
 
-img.qtipImg {
-    max-width: 250px; 
-    width: 250px;
-    width:expression(this.width > 250 ? "250px" : this.width);
-    overflow:hidden;
-<!-- 自适应图片尺寸 -->
-}
+    .img:hover {
+      border-color: #777; /* 鼠标悬停时改变边框颜色 */
+    }
 
-div.desc {
-    padding: 0px;
-    text-align: center;
-<!-- 图片描述区域尺寸 -->
-}
-</style>
+    /* 图片的样式 */
+    img.qtipImg {
+      max-width: 100%; /* 图片的最大宽度 */
+      height: auto; /* 自动调整高度以保持比例 */
+      object-fit: cover; /* 确保图片填充容器而不变形 */
+    }
 
-<!--插入照片模板 -->
-<p> Present Team Members @ 2024.10</p>
-<div class="responsive">
-  <div class="img"><a href="cv.html">
-         <img loading="lazy" src="image/cw4.jpg" alt="Trolltunga Norway" width="210" height="210"></a>
-    <div class="desc"><a class="active" href="cv.html" target="_self">Dr. Wei Chen</a></div>
+    /* 图片描述的样式 */
+    .desc {
+      padding: 5px 0;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+
+    /* 清除浮动 */
+    .clearfix {
+      clear: both;
+    }
+  </style>
+
+  <p>Present Team Members @ 2024.10</p>
+
+  <!-- 团队成员图片和描述 -->
+  <div class="responsive">
+    <div class="img">
+      <a href="cv.html"><img class="qtipImg" loading="lazy" src="image/cw4.jpg" alt="Dr. Wei Chen"></a>
+      <div class="desc"><a class="active" href="cv.html" target="_self">Dr. Wei Chen</a></div>
+    </div>
   </div>
 
-<div class="responsive">
-  <div class="img">
-         <img loading="lazy" src="image/ff2.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Dr. Fan Fang</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/ff2.jpg" alt="Dr. Fan Fang">
+      <div class="desc">Dr. Fan Fang</div>
+    </div>
   </div>
 
-	<div class="img">
-          <img loading="lazy" src="image/zhy2.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Huaying Zhong</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/zhy2.jpg" alt="Huaying Zhong">
+      <div class="desc">Huaying Zhong</div>
+    </div>
   </div>
-</div>
 
-<div class="responsive">
-  <div class="img">
-          <img loading="lazy" src="image/csm.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Simin Chen</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/csm.jpg" alt="Simin Chen">
+      <div class="desc">Simin Chen</div>
+    </div>
   </div>
-</div>
 
-<div class="responsive">
-  <div class="img">
-          <img loading="lazy" src="image/ct.JPG" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Tao Cao</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/ct.JPG" alt="Tao Cao">
+      <div class="desc">Tao Cao</div>
+    </div>
   </div>
-</div>
 
-<div class="clearfix"></div>
+  <div class="clearfix"></div>
 
-	<div class="responsive">
-  <div class="img">
-          <img loading="lazy" src="image/zhb.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Haibo Zhu</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/zhb.jpg" alt="Haibo Zhu">
+      <div class="desc">Haibo Zhu</div>
+    </div>
   </div>
-</div>
 
-<div class="clearfix"></div>
+  <div class="clearfix"></div>
 
-	<div class="responsive">
-  <div class="img">
-          <img loading="lazy" src="image/chenqian.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Qian Chen</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/chenqian.jpg" alt="Qian Chen">
+      <div class="desc">Qian Chen</div>
+    </div>
   </div>
-</div>
 
-<div class="clearfix"></div>
+  <div class="clearfix"></div>
 
-	<div class="responsive">
-  <div class="img">
-          <img loading="lazy" src="image/songyihan.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Yihan Song</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/songyihan.jpg" alt="Yihan Song">
+      <div class="desc">Yihan Song</div>
+    </div>
   </div>
-</div>
 
-<div class="clearfix"></div>
+  <div class="clearfix"></div>
 
-<div class="responsive">
-  <div class="img">
-          <img loading="lazy" src="image/CYM.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Youming Chen</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/CYM.jpg" alt="Youming Chen">
+      <div class="desc">Youming Chen</div>
+    </div>
   </div>
-</div>
 
+  <div class="clearfix"></div>
 
-<div class="clearfix"></div>
-	<div class="responsive">
-  <div class="img">
-          <img loading="lazy" src="image/cs.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Shuo Cheng</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/cs.jpg" alt="Shuo Cheng">
+      <div class="desc">Shuo Cheng</div>
+    </div>
   </div>
-</div>
 
-<div class="img">
-          <img loading="lazy" src="image/yzq.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Ziqian Yang</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/yzq.jpg" alt="Ziqian Yang">
+      <div class="desc">Ziqian Yang</div>
+    </div>
   </div>
-</div>
-	
-<div class="responsive">
-  <div class="img">
-          <img loading="lazy" src="image/ly.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Yi Liu</div>
-  </div>
-</div>
 
-<div class="img">
-          <img loading="lazy" src="image/lzp.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Zipeng Luo</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/ly.jpg" alt="Yi Liu">
+      <div class="desc">Yi Liu</div>
+    </div>
   </div>
-	
-</div>
-<div class="img">
-          <img loading="lazy" src="image/ly2.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Yi Li</div>
+
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/lzp.jpg" alt="Zipeng Luo">
+      <div class="desc">Zipeng Luo</div>
+    </div>
   </div>
-</div>
 
-	
-<div class="img">
-          <img loading="lazy" src="image/tyh.jpg" alt="Trolltunga Norway" width="212" height="212">
-    <div class="desc">Yihong Tang</div>
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/ly2.jpg" alt="Yi Li">
+      <div class="desc">Yi Li</div>
+    </div>
   </div>
-</div>
 
-	
-<div class="clearfix"></div>
- 
-<div style="padding:6px;">
+  <div class="responsive">
+    <div class="img">
+      <img class="qtipImg" loading="lazy" src="image/tyh.jpg" alt="Yihong Tang">
+      <div class="desc">Yihong Tang</div>
+    </div>
+  </div>
 
+  <div class="clearfix"></div>
+
+</main>
 </body> 
 </html>
