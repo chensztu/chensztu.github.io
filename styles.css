@@ -1,77 +1,135 @@
-/* 清除默认样式 */
+/* 全局样式：重置默认的边距和内边距 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 页面的基础样式 */
+/* 页面背景和字体设置 */
 body {
-    font-family: 'Arial', sans-serif;  /* 字体 */
-    background-color: #f4f4f9;  /* 背景颜色 */
+    font-family: 'Georgia', serif;  /* 使用 Google Fonts 中的 Georgia 字体 */
+    background-color: #f8f8f8;  /* 浅灰色背景 */
     color: #333;  /* 字体颜色 */
-}
-
-/* 导航栏样式 */
-ul {
-    list-style: none;
-    background-color: #003366;  /* 深蓝色背景 */
-    padding: 10px 0;
+    line-height: 1.6;
     margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* 页面内容水平居中 */
+    padding-top: 40px;
+}
+
+/* 顶部导航栏样式 */
+header {
+    background-color: white;
+    padding: 20px 0;
+    width: 100%;
     text-align: center;
-    font-size: 1.2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* 增加轻微的阴影 */
 }
 
-ul li {
-    display: inline-block;  /* 水平排列 */
-    margin: 0 20px;  /* 水平间距 */
+nav ul {
+    list-style: none;
+    text-align: center;
 }
 
-ul li a {
-    text-decoration: none;  /* 去掉下划线 */
-    color: white;  /* 字体颜色 */
-    padding: 14px 20px;  /* 内边距 */
-    display: block;
-    transition: background-color 0.3s ease;  /* 平滑过渡 */
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
 }
 
-ul li a:hover {
-    background-color: #ffcc00;  /* 悬停时的背景色 */
-    color: black;  /* 悬停时的字体颜色 */
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
 }
 
-/* 高亮显示当前页面的菜单项 */
-ul li a.active {
-    background-color: #ffcc00;  /* 当前页面的背景色 */
-    color: black;  /* 当前页面的字体颜色 */
+nav ul li a:hover {
+    background-color: #f0f0f0;
+    color: #0066cc;
 }
 
-/* 内容区样式 */
-.content {
-    margin: 20px auto;
+nav ul li a.active {
+    border-bottom: 2px solid #0066cc;  /* 当前菜单项的下划线 */
+}
+
+/* 主体内容区域 */
+main {
     max-width: 1200px;
-    padding: 20px;
-    background-color: #fff;
+    width: 100%;
+    padding: 30px;
+    background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.content h1 {
+/* 左侧和右侧列 */
+.left-column, .right-column {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+/* 左侧列标题 */
+.left-column h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-/* 响应式设计：适应小屏幕 */
+/* 右侧列标题 */
+.right-column h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* 内容段落样式 */
+p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* 联系信息区域样式 */
+.contact {
+    text-align: center;
+    font-size: 1em;
+    color: #666;
+    margin-top: 30px;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+/* 响应式设计：当屏幕宽度小于768px时 */
 @media (max-width: 768px) {
-    ul {
-        text-align: left;  /* 导航栏在小屏幕上左对齐 */
+    main {
+        flex-direction: column;  /* 使左右列堆叠成一列 */
     }
 
-    ul li {
+    .left-column, .right-column {
+        flex: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        text-align: left;
+    }
+
+    nav ul li {
         display: block;
-        margin: 10px 0;  /* 垂直排列时调整间距 */
-    }
-
-    .content h1 {
-        font-size: 2em;
+        margin: 10px 0;
     }
 }
