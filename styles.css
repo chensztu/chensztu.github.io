@@ -32,33 +32,40 @@ header {
     z-index: 10;  /* 确保header在其他元素之上 */
 }
 
-/* 导航栏链接 */
+/* 导航栏无序列表 */
 nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
+/* 导航栏列表项 */
 nav ul li {
     display: inline-block;
     margin: 0 20px;
 }
 
+/* 导航栏链接 */
 nav ul li a {
     text-decoration: none;
     color: #333;
     font-size: 1.1em;
     padding: 10px 15px;
     display: inline-block;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* 导航栏链接悬停效果 */
 nav ul li a:hover {
     background-color: #f0f0f0;
     color: #0066cc;
 }
 
+/* 当前页面链接的下划线样式 */
 nav ul li a.active {
     border-bottom: 2px solid #0066cc;  /* 当前菜单项的下划线 */
+    color: #0066cc;  /* 改变当前链接文字颜色 */
 }
 
 /* 主体内容区域 */
