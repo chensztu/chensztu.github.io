@@ -21,7 +21,7 @@ body {
 
 /* 顶部导航栏样式 */
 header {
-    padding: 20px 0;
+    padding: 10px 0;
     width: 100%;
     max-width: 1200px;  /* 限制最大宽度 */
     text-align: center;
@@ -64,8 +64,8 @@ main {
     padding: 30px;
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 80px;  /* 给固定导航栏留出空间 */
-    margin-bottom: 80px;  /* 给footer留出空间 */
+    margin-top: 10px;  /* 给固定导航栏留出空间 */
+    margin-bottom: 10px;  /* 给footer留出空间 */
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
