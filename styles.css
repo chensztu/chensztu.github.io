@@ -135,6 +135,13 @@ footer {
 
 /* 响应式设计：当屏幕宽度小于768px时 */
 @media (max-width: 768px) {
+    /* 在小屏幕下，增加顶部内边距，确保内容不被导航栏遮挡 */
+    body {
+        padding-top: 80px;  /* 确保在手机上有足够的空间 */
+    }
+}
+
+@media (max-width: 768px) {
     main {
         flex-direction: column;  /* 使左右列堆叠成一列 */
         justify-content: center;  /* 使main区域内容居中 */
