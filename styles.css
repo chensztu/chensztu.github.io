@@ -1,0 +1,51 @@
+/* styles.css */
+
+body {
+    min-height: 100vh;
+    max-width: 900px;
+    background: rgb(255, 255, 255); 
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #0099FF;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.contact {
+    background: rgb(255, 255, 255);
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.divleft {
+    float: left;
+    width: 500px;
+    border: 1px;
+}
+
+.divright {
+    float: right;
+    width: 350px;
+    border: 1px;
+}
