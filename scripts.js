@@ -1,14 +1,14 @@
-<script>
-  // 获取当前页面的文件名
-  const currentPage = window.location.pathname.split('/').pop();
+// 获取当前页面的路径
+const currentPage = window.location.pathname;
 
-  // 找到所有导航链接并遍历
-  const links = document.querySelectorAll('.navbar a');
-  links.forEach(link => {
-    // 如果当前链接的href包含当前页面的文件名
+// 获取所有导航栏链接
+const navbarLinks = document.querySelectorAll('.navbar a');
+
+// 遍历所有链接，检查是否与当前页面匹配
+navbarLinks.forEach(link => {
+    // 如果链接的 href 和当前页面路径匹配，添加 'active' 类
     if (link.href.includes(currentPage)) {
-      // 为该链接添加active类
-      link.classList.add('active');
+        link.classList.add('active');
     }
-  });
-</script>
+});
+
