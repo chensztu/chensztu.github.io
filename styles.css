@@ -1,24 +1,23 @@
-/* 全局样式：重置默认的边距和内边距 */
+/* 重置默认样式 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 页面背景和字体设置 */
+/* 页面整体样式 */
 body {
-    font-family: 'Georgia', serif;  /* 使用 Google Fonts 中的 Georgia 字体 */
-    background-color: #f8f8f8;  /* 浅灰色背景 */
-    color: #333;  /* 字体颜色 */
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;  /* 背景颜色 */
+    color: #333;  /* 文字颜色 */
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: center;  /* 页面内容水平居中 */
-    padding-top: 40px;
+    flex-direction: column;  /* 内容垂直布局 */
+    align-items: center;  /* 居中内容 */
+    padding: 20px 0;
 }
 
-/* 顶部导航栏样式 */
+/* 顶部导航栏 */
 header {
     width: 100%;
     background-color: white;
@@ -38,93 +37,88 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 1.1em;
-    padding: 10px 15px;
+    font-size: 1.2em;
+    padding: 10px 20px;
     display: inline-block;
-    transition: background-color 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: #f0f0f0;
-    color: #0066cc;
+nav ul li a:hover, nav ul li a.active {
+    background-color: #0066cc;
+    color: white;
 }
 
-nav ul li a.active {
-    border-bottom: 2px solid #0066cc;  /* 当前菜单项的下划线 */
-}
-
-/* 主体内容区域 */
-main {
-    max-width: 1200px;
-    width: 100%;
-    padding: 30px;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+/* 主体内容容器，采用Flexbox布局 */
+.main-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 80px;  /* 为了避免顶部导航栏遮挡，给内容留出空间 */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* 左侧和右侧列 */
-.left-column, .right-column {
-    flex: 1;
+/* 左列样式 */
+.left-column {
+    flex: 3;
     padding: 20px;
     text-align: left;
+    background-color: #ffffff;
 }
 
-/* 左侧列标题 */
 .left-column h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
 }
 
-/* 右侧列标题 */
-.right-column h2 {
-    font-size: 2em;
+.left-column p {
+    font-size: 1.2em;
     margin-bottom: 20px;
 }
 
-/* 内容段落样式 */
-p {
-    font-size: 1.1em;
-    line-height: 1.5;
+/* 右列样式 */
+.right-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.right-column h2 {
+    font-size: 2em;
     margin-bottom: 15px;
 }
 
-/* 联系信息区域样式 */
-.contact {
-    text-align: center;
-    font-size: 1em;
-    color: #666;
-    margin-top: 30px;
+.right-column p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
 }
 
 /* 页脚样式 */
 footer {
     background-color: white;
-    text-align: center;  /* 使footer内容居中 */
+    text-align: center;
     padding: 10px 0;
     margin-top: 40px;
     color: #666;
     font-size: 1em;
-    width: 100%;  /* 确保footer占满全宽 */
 }
 
-/* 响应式设计：当屏幕宽度小于768px时 */
+/* 响应式设计：当屏幕宽度小于768px时，左右列堆叠成一列 */
 @media (max-width: 768px) {
-    main {
-        flex-direction: column;  /* 使左右列堆叠成一列 */
+    .main-container {
+        flex-direction: column;  /* 垂直堆叠左右列 */
     }
 
     .left-column, .right-column {
         flex: none;
-        width: 100%;
+        width: 100%;  /* 宽度100% */
         margin-bottom: 20px;
     }
 
