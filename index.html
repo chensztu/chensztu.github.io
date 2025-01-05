@@ -5,23 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wei Chen @ SZTU</title>
     <link rel="icon" href="image/epl.ico" type="image/x-icon">
+
     <!-- 引用外部 CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- 导航栏 -->
-    <ul>
-        <li><a class="active" href="index.html" target="_self">HOME</a></li>
-        <li><a href="research.html" target="_self">RESEARCH</a></li>
-        <li><a href="team.html" target="_self">TEAM</a></li>
-        <li><a href="publication.html" target="_self">PUBLICATION</a></li>
-        <li><a href="cv.html" target="_self">CV</a></li>
-    </ul>
+    <!-- 顶部导航栏 -->
+    <header>
+        <nav>
+            <ul>
+                <li><a class="active" href="index.html">HOME</a></li>
+                <li><a href="research.html">RESEARCH</a></li>
+                <li><a href="team.html">TEAM</a></li>
+                <li><a href="publication.html">PUBLICATION</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </nav>
+    </header>
 
-   <div style="padding:2px 0px;min-height: 100%;">
-
-<div class="divleft">
+    <!-- 主体内容区域 -->
+    <main class="main-container">
+        <section class="left-column">
+            <h1>Welcome to Wei Chen's Homepage</h1>
+            <div class="divleft">
 <font size="4.5" color="black">
 <p>Dr. Wei Chen / 陈威 博士</p>
 <p>Dr.rer.nat. at TUM / 毕业于慕尼黑工业大学（德国）物理系</p>
@@ -76,18 +83,11 @@
 <P><a class="active" href="https://www.aps.anl.gov/Sector-8/8-ID/Operations-and-Schedules/Useful-Links/Sector-8-GIXSGUI", target="_blank">gixsgui<a></P>
 </div>
 <br>
+        </section>
 
-<div class="divleft">
-<font size="4" color="black">
-<p> &copy Copyright 2025, Wei Chen @ SZTU</p>
-</div>
-<br>
-    
-</div>
-
-<!-- 为左边内容-->
-
-<div style="padding:2px 0px;min-height: 100%;">
+        <section class="right-column">
+            <h2>Contact Information</h2>
+           <div style="padding:2px 0px;min-height: 100%;">
 <div class="divright">
 <div class="image">
 <P style="text-align: left"><img style="max-width:280px; overflow:hidden;" src="image/cw.jpg" alt=""></P>
@@ -113,11 +113,10 @@
 <p>[2024/10] Wei joined the Sino-German Workshop and gave a plenary talk in Hangzhou</p>
 </div> 
 <br>
+            <p>&copy; Copyright 2025, Wei Chen @ SZTU</p>
+        </section>
+    </main>
 
-</div>
-</div>
-
-<!-- 为右边内容-->
     <!-- 引用外部 JavaScript -->
     <script src="scripts.js"></script>
 </body>
