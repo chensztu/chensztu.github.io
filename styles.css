@@ -113,6 +113,7 @@ footer {
     color: #666;
     font-size: 1em;
     width: 100%;  /* 确保footer占满全宽 */
+    margin-top: auto;  /* 将footer推到底部 */
 }
 
 /* 响应式设计：当屏幕宽度小于768px时 */
