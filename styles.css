@@ -20,8 +20,6 @@ body {
 
 /* 顶部导航栏样式 */
 header {
-    position: sticky;  /* sticky定位，使导航栏固定在页面顶部 */
-    top: 0;
     padding: 15px 0;
     width: 100%;
     max-width: 1200px;
@@ -56,13 +54,13 @@ nav ul li a {
 
 /* 导航栏链接悬停效果 */
 nav ul li a:hover {
-    background-color: #f0f0f0;
+    background-color: transparent;  /* 去掉背景色 */
     color: #0066cc;
 }
 
 /* 当前页面链接的下划线样式 */
 nav ul li a.active {
-    border-bottom: 2px solid #0066cc;  /* 当前菜单项的下划线 */
+    border-bottom: none;  /* 去掉下划线 */
     color: #0066cc;  /* 改变当前链接文字颜色 */
 }
 
@@ -71,7 +69,6 @@ main {
     max-width: 1200px;
     width: 100%;
     padding: 30px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 0;  /* 移除顶部空隙 */
     margin-bottom: 0;  /* 不留底部空隙 */
     display: flex;
@@ -136,7 +133,6 @@ footer {
     text-align: center;
     color: #666;
     font-size: 0.9em;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 1200px;
     margin-top: 0;
