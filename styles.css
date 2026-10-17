@@ -80,6 +80,7 @@ main {
 /* 左侧和右侧列 */
 .left-column, .right-column {
     flex: 1 1 45%;
+    min-width: 0;
     padding: 20px;
     text-align: left;
     box-sizing: border-box;
@@ -92,12 +93,68 @@ main {
     height: auto;
 }
 
+/* Scientific illustrations retain their full proportions inside a square. */
+.research-content { width: 100%; }
+.research-content .image img {
+    width: min(400px, 100%);
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    object-position: center;
+    background: white;
+}
+
 /* 内容段落样式 */
 p {
     font-size: 1.1em;
     line-height: 1.5;
     margin-bottom: 15px;
+    overflow-wrap: anywhere;
 }
+
+/* Match the original CV's size=4 body and size=5 name. */
+.cv-content { width: 100%; font-size: 18px; color: black; }
+.cv-content > p:first-of-type { font-size: 26.4px; }
+
+/* Keyboard navigation uses the existing link color. */
+a:focus-visible { outline: 2px solid #0066cc; outline-offset: 3px; }
+
+/* Semantic headings retain the appearance of the original bold labels. */
+.section-heading { display: inline; font-size: inherit; font-weight: bold; }
+.team-title { line-height: 1.5; }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+.skip-link {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 8px 12px;
+    background: white;
+    color: #0066cc;
+    z-index: 100;
+    transform: translateY(-200%);
+}
+.skip-link:focus { transform: translateY(0); }
+.publication-year {
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    scroll-margin-top: 20px;
+}
+.year-navigation { max-width: 100%; }
+.year-navigation p, .back-to-top { overflow-wrap: anywhere; }
+.back-to-top { text-align: right; }
 
 /* 响应式设计：当屏幕宽度小于768px时 */
 @media (max-width: 768px) {
@@ -113,9 +170,15 @@ p {
     }
 
     .left-column, .right-column {
+        flex: auto;
         width: 100%;
         margin-bottom: 20px;
     }
+
+    .content-wrapper, .cv-content, .responsive { max-width: 100%; }
+    .responsive { padding-left: 0; }
+    .responsive .img { max-width: 100%; }
+    .responsive .img img { max-width: 100%; }
 
     nav ul {
         text-align: left;
