@@ -160,10 +160,11 @@ a:focus-visible { outline: 2px solid #0066cc; outline-offset: 3px; }
 @media (max-width: 768px) {
     /* 增加顶部空间，避免导航栏遮挡 */
     body {
-        padding-top: 80px;  /* 适当增加顶部空间 */
+        padding-top: max(60px, calc(env(safe-area-inset-top) + 60px));
     }
 
     main {
+        padding-top: 10px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -214,6 +215,23 @@ footer {
 
 /* Compact mobile navigation; desktop retains the original navigation. */
 .menu-toggle { display: none; }
+/* Reorder the single copy of homepage content on phones only. */
+@media (max-width: 768px) {
+    .home-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        align-items: start;
+    }
+    .home-layout > .left-column,
+    .home-layout > .right-column,
+    .home-layout .home-right-wrapper,
+    .home-layout .home-right-content { display: contents; }
+    .home-layout .home-portrait { order: 1; padding: 0 20px; }
+    .home-layout .home-profile { order: 2; padding: 0 20px; }
+    .home-layout .home-biography { order: 3; padding: 0 20px; }
+    .home-layout .home-research { order: 4; padding: 0 20px 20px; }
+    .home-layout .home-activities { order: 5; padding: 20px; }
+}
 @media (max-width: 768px) {
     header.mobile-menu-ready {
         position: fixed;
