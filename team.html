@@ -13,6 +13,7 @@
 
     <!-- 引入自定义的 CSS 文件 -->
     <link rel="stylesheet" href="styles.css">
+    <script src="navigation.js" defer></script>
 
     <!-- 用于搜索引擎优化（SEO）的 meta 标签 -->
     <meta name="description" content="Meet the members of the Energy &amp; Photonics Lab and the Lab for Smart Optoelectronic Integration Systems at Shenzhen Technology University.">
@@ -31,7 +32,8 @@
 <body><a class="skip-link" href="#main-content">Skip to main content</a>
 	 <!-- 顶部导航栏 -->
     <header>
-        <nav aria-label="Main navigation">
+        <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation menu" hidden><span class="menu-icon" aria-hidden="true">☰</span><span class="visually-hidden">Menu</span></button>
+        <nav id="main-navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="research.html">RESEARCH</a></li>
