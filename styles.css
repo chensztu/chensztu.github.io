@@ -123,6 +123,7 @@ a:focus-visible { outline: 2px solid #0066cc; outline-offset: 3px; }
 /* Semantic headings retain the appearance of the original bold labels. */
 .section-heading { display: inline; font-size: inherit; font-weight: bold; }
 .team-title { line-height: 1.5; }
+.member-cohort { padding: 0 5px 5px; font-size: 14px; color: #666; }
 .visually-hidden {
     position: absolute;
     width: 1px;
