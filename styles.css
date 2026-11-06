@@ -251,7 +251,7 @@ footer {
         height: 46px;
         border: 1px solid #ddd;
         border-radius: 8px;
-        background: #fff;
+        background: #98c6ea; /* TUM light blue */
         color: #333;
         font: 26px/1 Georgia, serif;
         cursor: pointer;
