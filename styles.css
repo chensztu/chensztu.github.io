@@ -216,7 +216,7 @@ footer {
 
 /* Compact mobile navigation; desktop retains the original navigation. */
 .menu-toggle { display: none; }
-.mobile-lab-heading { display: none; }
+.lab-name { display: block; margin: 0 20px 12px; color: #333; text-decoration: none; font-size: 26px; font-weight: bold; line-height: 1.4; }
 /* Reorder the single copy of homepage content on phones only. */
 @media (max-width: 768px) {
     .home-layout {
@@ -228,14 +228,6 @@ footer {
     .home-layout > .right-column,
     .home-layout .home-right-wrapper,
     .home-layout .home-right-content { display: contents; }
-    .home-layout .mobile-lab-heading {
-        display: block;
-        order: 0;
-        margin: 0 20px 18px;
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 1.4;
-    }
     .home-layout .home-portrait { order: 1; padding: 0 20px; }
     .home-layout .home-profile { order: 2; padding: 0 20px; }
     .home-layout .home-biography { order: 3; padding: 0 20px; }
@@ -245,10 +237,14 @@ footer {
 @media (max-width: 768px) {
     header.mobile-menu-ready {
         position: fixed;
-        top: max(12px, env(safe-area-inset-top));
-        right: max(12px, env(safe-area-inset-right));
-        width: auto;
-        padding: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: none;
+        min-height: 74px;
+        padding: calc(12px + env(safe-area-inset-top)) 78px 12px 20px;
+        background: #fff;
         z-index: 50;
     }
     .mobile-menu-ready .menu-toggle {
@@ -283,4 +279,11 @@ footer {
     }
     #main-navigation ul li { margin: 0; }
     #main-navigation ul li a { display: block; padding: 10px 14px; }
+}
+
+@media (max-width: 768px) {
+    body { padding-top: calc(84px + env(safe-area-inset-top)); }
+    .lab-name { margin: 0; font-size: 18px; text-align: left; overflow-wrap: normal; }
+    .mobile-menu-ready .menu-toggle { position: absolute; top: calc(12px + env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); }
+    .mobile-menu-ready.menu-open > nav { position: absolute; top: 100%; right: 12px; margin-top: 0; max-height: calc(100dvh - 100px - env(safe-area-inset-top)); }
 }
