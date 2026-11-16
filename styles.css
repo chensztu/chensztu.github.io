@@ -216,6 +216,7 @@ footer {
 
 /* Compact mobile navigation; desktop retains the original navigation. */
 .menu-toggle { display: none; }
+.mobile-lab-heading { display: none; }
 /* Reorder the single copy of homepage content on phones only. */
 @media (max-width: 768px) {
     .home-layout {
@@ -227,6 +228,14 @@ footer {
     .home-layout > .right-column,
     .home-layout .home-right-wrapper,
     .home-layout .home-right-content { display: contents; }
+    .home-layout .mobile-lab-heading {
+        display: block;
+        order: 0;
+        margin: 0 20px 18px;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.4;
+    }
     .home-layout .home-portrait { order: 1; padding: 0 20px; }
     .home-layout .home-profile { order: 2; padding: 0 20px; }
     .home-layout .home-biography { order: 3; padding: 0 20px; }
